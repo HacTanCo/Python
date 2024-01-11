@@ -36,7 +36,9 @@
 # for i in range(n):
 #     if a[x-1][i] == 1:
 #         print(i+1,end=' ')
-    
+
+
+
 # Câu 3:
 class Hoanghoa:
     def __init__(self,mh='',th='',sl=0,gb=0):

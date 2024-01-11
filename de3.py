@@ -83,17 +83,16 @@ class quanly:
     def top1andtopcuoi(a):
         max = a.arr[0]
         min = a.arr[0]
-        print('\nLô đất có chu vi lớn nhất !!!')
         for i in a.arr:
             if max.cv() < i.cv():
                 max = i
+            if min.cv() > i.cv():
+                min = i
+        print('\nLô đất có chu vi lớn nhất !!!')
         for i in a.arr:
             if max.cv() == i.cv():
                 i.showld()   
-        print('\nLô đất có chu vi nhỏ nhất !!!')
-        for i in a.arr:
-            if min.cv() > i.cv():
-                min = i
+        print('\nLô đất có chu vi nhỏ nhất !!!')  
         for i in a.arr:
             if min.cv() == i.cv():
                 i.showld() 
@@ -109,7 +108,7 @@ class quanly:
         for i in a.arr:
             i.showld()
     def gan150(a):
-        a.arr.sort(key=lambda x: (x.dt() - 150))
+        a.arr.sort(key=lambda x: abs((x.dt() - 150)))
         print('\nDanh sách các lô đất được sắp xếp theo tiêu chí gần 150m2:')
         for i in a.arr:
             i.showld()
